@@ -1,0 +1,37 @@
+print("4 sheet/16 page booklet imposition by Diversiforge")
+PageWidth = SourceWidth * 2
+PageHeight = SourceHeight
+
+print("PageCount",PageCount)
+
+pps = 16
+offset = 0
+sheet = 1
+
+while offset < PageCount
+  do
+
+  PushRecord(offset+16, sheet, 0, 0, 0)
+  PushRecord(offset+1, sheet, 0, SourceWidth, 0)
+  PushRecord(offset+2, sheet+1, 0, 0, 0)
+  PushRecord(offset+15, sheet+1, 0, SourceWidth, 0)
+  
+  PushRecord(offset+14, sheet+2, 0, 0, 0)
+  PushRecord(offset+3, sheet+2, 0, SourceWidth, 0)
+  PushRecord(offset+4, sheet+3, 0, 0, 0)
+  PushRecord(offset+13, sheet+3, 0, SourceWidth, 0)
+
+  PushRecord(offset+12, sheet+4, 0, 0, 0)
+  PushRecord(offset+5, sheet+4, 0, SourceWidth, 0)
+  PushRecord(offset+6, sheet+5, 0, 0, 0)
+  PushRecord(offset+11, sheet+5, 0, SourceWidth, 0)
+  
+  PushRecord(offset+10, sheet+6, 0, 0, 0)
+  PushRecord(offset+7, sheet+6, 0, SourceWidth, 0)
+  PushRecord(offset+8, sheet+7, 0, 0, 0)
+  PushRecord(offset+9, sheet+7, 0, SourceWidth, 0)
+
+  offset = offset + pps
+  sheet = sheet + 8
+  
+  end
