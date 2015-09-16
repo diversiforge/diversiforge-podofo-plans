@@ -1,11 +1,13 @@
 # diversiforge-podofo-plans
 Exactly what it says on the tin: PoDoFo book imposition plans by Diversiforge.
 
+These are plan files only: scripts which tell PoDoFo how to impose a given PDF. PoDoFo is available from http://podofo.sourceforge.net/ .
+
 Usage:
 ```
 podofoimpose source.pdf destination.pdf name-of-plan-file.plan lua
 ```
-(These are plan files only: scripts which tell PoDoFo how to impose a given PDF. PoDoFo is available from http://podofo.sourceforge.net/ .)
+You can print the imposed PDF using the double-sided printing method of your choice.
 
 ## 16 page, 4 sheet booklet (2-up)
 This will turn a PDF of single pages into a PDF imposed to four pages to a sheet, four sheets to a signature/folio. I typically use this with a 5.5"x8.5" PDF, to print on 11"x8.5" paper, but any PDF that is half the size of your target sheet size should do.
