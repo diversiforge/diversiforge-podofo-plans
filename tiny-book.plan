@@ -1,0 +1,64 @@
+-- 16-up book with 4-sheet signatures
+-- tiny thing on letter paper
+print("16-up Book")
+
+-- setup
+-- pages per sheet: 16 front, 16 back
+pps = 32
+PageWidth = SourceWidth * 4.0
+PageHeight = SourceHeight * 4.0
+
+print("PageCount",PageCount)
+print("SourceWidth", SourceWidth, "SourceHeight", SourceHeight)
+print("PageWidth", PageWidth, "PageHeight", PageHeight)
+
+offset = 0
+sheet = 1
+
+while offset < PageCount
+	do
+
+	PushRecord(offset+16, sheet, 0, 0, SourceHeight*3)
+	PushRecord(offset+1, sheet, 0, SourceWidth, SourceHeight*3)
+	PushRecord(offset+14, sheet, 0, SourceWidth*2, SourceHeight*3)
+	PushRecord(offset+3, sheet, 0, SourceWidth*3, SourceHeight*3)
+
+	PushRecord(offset+12, sheet, 0, 0, SourceHeight*2)
+	PushRecord(offset+5, sheet, 0, SourceWidth, SourceHeight*2)
+	PushRecord(offset+10, sheet, 0, SourceWidth*2, SourceHeight*2)
+	PushRecord(offset+7, sheet, 0, SourceWidth*3, SourceHeight*2)
+
+	PushRecord(offset+16+16, sheet, 0, 0, SourceHeight)
+	PushRecord(offset+16+1, sheet, 0, SourceWidth, SourceHeight)
+	PushRecord(offset+16+14, sheet, 0, SourceWidth*2, SourceHeight)
+	PushRecord(offset+16+3, sheet, 0, SourceWidth*3, SourceHeight)
+
+	PushRecord(offset+16+12, sheet, 0, 0, 0)
+	PushRecord(offset+16+5, sheet, 0, SourceWidth, 0)
+	PushRecord(offset+16+10, sheet, 0, SourceWidth*2, 0)
+	PushRecord(offset+16+7, sheet, 0, SourceWidth*3, 0)
+
+	PushRecord(offset+4, sheet+1, 0, 0, SourceHeight*3)
+	PushRecord(offset+13, sheet+1, 0, SourceWidth, SourceHeight*3)
+	PushRecord(offset+2, sheet+1, 0, SourceWidth*2, SourceHeight*3)
+	PushRecord(offset+15, sheet+1, 0, SourceWidth*3, SourceHeight*3)
+
+	PushRecord(offset+8, sheet+1, 0, 0, SourceHeight*2)
+	PushRecord(offset+9, sheet+1, 0, SourceWidth, SourceHeight*2)
+	PushRecord(offset+6, sheet+1, 0, SourceWidth*2, SourceHeight*2)
+	PushRecord(offset+11, sheet+1, 0, SourceWidth*3, SourceHeight*2)
+
+	PushRecord(offset+16+4, sheet+1, 0, 0, SourceHeight)
+	PushRecord(offset+16+13, sheet+1, 0, SourceWidth, SourceHeight)
+	PushRecord(offset+16+2, sheet+1, 0, SourceWidth*2, SourceHeight)
+	PushRecord(offset+16+15, sheet+1, 0, SourceWidth*3, SourceHeight)
+
+	PushRecord(offset+16+8, sheet+1, 0, 0, 0)
+	PushRecord(offset+16+9, sheet+1, 0, SourceWidth, 0)
+	PushRecord(offset+16+6, sheet+1, 0, SourceWidth*2, 0)
+	PushRecord(offset+16+11, sheet+1, 0, SourceWidth*3, 0)
+	
+	offset = offset + pps
+	sheet = sheet + 2
+	
+	end
