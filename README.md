@@ -12,6 +12,8 @@ You can print the imposed PDF using the double-sided printing method of your cho
 ## 16 page, 4 sheet booklet (2-up)
 This will turn a PDF of single pages into a PDF imposed to four pages to a sheet, four sheets to a signature/folio. I typically use this with a 5.5"x8.5" PDF, to print on 11"x8.5" paper, but any PDF that is half the size of your target sheet size should do.
 
+You should be able to accomplish the same effect with Adobe Reader's booklet printing option, but I haven't tried it.
+
 ## Tiny book (16-up)
 Want a tiny library filled with tiny books? Of course you do. This will cram 32 PDF pages on a single sheet (16 pages to a side). I use this with 11"x8.5" paper and a 2.125"x2.75" PDF, but if you've got bigger (or smaller!) paper, just divide the dimensions by 4 to get your PDF size.
 
