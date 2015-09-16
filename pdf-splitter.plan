@@ -1,0 +1,30 @@
+-- Splits PDFs in half
+print("PDF Splitter")
+
+PageWidth = SourceWidth/2
+PageHeight = SourceHeight
+
+print("SourceWidth", SourceWidth, "SourceHeight", SourceHeight)
+print("PageWidth", PageWidth, "PageHeight", PageHeight)
+
+-- start at sheet number one/page number one
+sheet = 1
+page = 1
+
+-- uncomment these if the first sheet is half size
+-- PushRecord(1, 1, 0, 0, 0)
+-- sheet = 2
+-- page = 2
+
+while page < PageCount
+	do
+
+	PushRecord(page, sheet, 0, 0, 0)
+	PushRecord(page, sheet+1, 0, PageWidth*-1, 0)
+
+	page = page + 1
+	sheet = sheet + 2
+	
+	end
+	
+PushRecord(PageCount, sheet, 0, 0, 0)
