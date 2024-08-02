@@ -1,4 +1,9 @@
 # diversiforge-podofo-plans
+
+**Moved to https://github.com/heatherathebyne/podofo-plans**
+
+---
+
 Exactly what it says on the tin: PoDoFo book imposition plans by Diversiforge.
 
 These are plan files only: scripts which tell PoDoFo how to impose a given PDF. PoDoFo is available from http://podofo.sourceforge.net/ .
